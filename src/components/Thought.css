@@ -1,8 +1,12 @@
 .thought{
-  height: 5rem;
   border: 1px solid black;
   border-radius: 0.2rem;
-  margin: 3rem;
-  width: 50%;
+  margin: 1rem;
   background-color: rgba(0, 0, 255, 0.452);
+  min-width: 10rem;
+  padding: 0.5rem;
+}
+
+p{
+  max-width: 40ch;
 }
