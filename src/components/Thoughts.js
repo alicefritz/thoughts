@@ -11,7 +11,7 @@ export default function Thoughts({thoughts}) {
   return (
     <div className="thoughts">
       {thoughts.map(thought => {
-        return <Thought key={thought.id} thought={thought}/>
+        return <Thought key={thought.ThoughtID} thought={thought}/>
       })}
     </div>
   )
