@@ -5,8 +5,19 @@
   background-color: rgba(0, 0, 255, 0.452);
   min-width: 10rem;
   padding: 0.5rem;
+  backdrop-filter: blur(10px);
 }
 
 p{
   max-width: 40ch;
+}
+
+.add-comment-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-around;
 }
