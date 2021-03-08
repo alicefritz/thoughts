@@ -1,5 +1,4 @@
 .thought{
-  border: 1px solid black;
   border-radius: 0.2rem;
   margin: 1rem;
   background-color: rgba(0, 0, 255, 0.452);
@@ -10,6 +9,7 @@
 
 p{
   max-width: 40ch;
+  overflow-wrap: break-word;
 }
 
 .add-comment-form{
@@ -19,5 +19,5 @@ p{
 
 .buttons{
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
