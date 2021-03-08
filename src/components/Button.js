@@ -1,8 +1,9 @@
 import React from 'react'
+import './Button.css'
 
-export default function Button({text, toggle}) {
+export default function Button({text, toggle, color}) {
   return (
-    <button onClick={toggle}>
+    <button onClick={toggle} style={{backgroundColor:color}}>
       {text}
     </button>
   )
