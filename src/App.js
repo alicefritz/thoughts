@@ -12,7 +12,7 @@ function App() {
 
   const fetchThoughts = () => {
     console.log('fetching')
-    fetch('http://localhost:3000/thoughts_comments')
+    fetch('https://af-thoughts-api.herokuapp.com/thoughts_comments')
     .then(res => res.json())
     .then(data => setThoughts(data))
   }
@@ -21,9 +21,11 @@ function App() {
     fetchThoughts();
   }, [])
 
+
+
   //Add thought
   const addNewThought = (thought) => {
-    fetch('http://localhost:3000/thoughts',
+    fetch('https://af-thoughts-api.herokuapp.com/thoughts',
     {
       method:'POST',
       headers: {
@@ -31,7 +33,8 @@ function App() {
       },
       body:JSON.stringify({
         thinker: thought.thinker,
-        thought: thought.thoughtText
+        thought: thought.thoughtText,
+        time: thought.today
       })
     })
     .then(response => response.json())
@@ -50,7 +53,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Button toggle={toggleAddThought} text="New Thought"/>
+      <Button toggle={toggleAddThought} text="New Thought" color="green"/>
       {addThoughtsOpen && <AddThought onAdd={addNewThought}/>}
       <Thoughts thoughts={thoughts}/>
     </div>

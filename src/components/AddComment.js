@@ -1,13 +1,14 @@
 import React from 'react'
 import {useState} from 'react'
+import Comments from './Comments'
 
-export default function AddComment({thought}) {
+export default function AddComment({thought, setComments, comments}) {
   const [commentName, setCommentName] = useState('')
   const [commentText, setCommentText] = useState('')
 
   const addNewComment = (comment) => {
     console.log(comment.ThoughtID)
-    fetch('http://localhost:3000/comments',
+    fetch('https://af-thoughts-api.herokuapp.com/comments',
     {
       method:'POST',
       headers: {
@@ -22,6 +23,7 @@ export default function AddComment({thought}) {
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data);
+      setComments([...comments, data])
     })
   }
 
