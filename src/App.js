@@ -13,7 +13,7 @@ function App() {
 
   const fetchThoughts = () => {
     console.log('fetching')
-    fetch('https://af-thoughts-api.herokuapp.com/thoughts_comments')
+    fetch('https://af-thoughts-api.herokuapp.com/thoughts')
     .then(res => res.json())
     .then(data => setThoughts(data))
   }
