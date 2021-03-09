@@ -32,8 +32,9 @@ export default function Thought({thought}) {
         {(thought.comment_count > 0 || comments.length > 0) && <Button text={commentsOpen ? 'Hide comments' : 'Read comments'} toggle={toggleComments}/>}
         <Button text={addCommentOpen ? 'Close' : 'Add comment'}  toggle={toggleAddComment}/>
       </div>
-      {commentsOpen && <Comments ThoughtID={thought.ThoughtID} comments={comments} setComments={setComments}/>}
       {addCommentOpen && <AddComment thought={thought} setComments={setComments} comments={comments}/>}
+      {commentsOpen && <Comments ThoughtID={thought.ThoughtID} comments={comments} setComments={setComments}/>}
+      
     </div>
   )
 }
