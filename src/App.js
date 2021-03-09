@@ -4,6 +4,7 @@ import './index.css'
 import {useState, useEffect} from 'react'
 import AddThought from './components/AddThought'
 import Button from './components/Button'
+import Loader from './components/Loader'
 
 function App() {
 
@@ -55,7 +56,7 @@ function App() {
       <Header/>
       <Button toggle={toggleAddThought} text="New Thought" color="green"/>
       {addThoughtsOpen && <AddThought onAdd={addNewThought}/>}
-      <Thoughts thoughts={thoughts}/>
+      {thoughts.length > 0 ? <Thoughts thoughts={thoughts}/> : <Loader/>}
     </div>
   );
 }
