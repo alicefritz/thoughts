@@ -29,7 +29,7 @@ export default function Thought({thought}) {
       <p>{thought.time.length > 10 ? thought.time.slice(0, 10) : thought.time}</p>
       <p>{comments.length ? comments.length : thought.comment_count ? thought.comment_count : 0} comments</p>
       <div className="buttons">
-        {(thought.comment_count > 0 || comments.length > 0) && <Button text={commentsOpen ? 'Hide comments' : 'Read comments'} toggle={toggleComments}/>}
+        {(thought.comment_count > 0 || comments.length > 0) && <Button text={commentsOpen ? 'Hide comments' : 'Show comments'} toggle={toggleComments}/>}
         <Button text={addCommentOpen ? 'Close' : 'Add comment'}  toggle={toggleAddComment}/>
       </div>
       {addCommentOpen && <AddComment thought={thought} setComments={setComments} comments={comments}/>}
