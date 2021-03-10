@@ -1,7 +1,6 @@
 .thought{
   border-radius: 0.2rem;
   margin: 1rem;
-  background-color: rgba(0, 0, 255, 0.452);
   min-width: 10rem;
   padding: 0.5rem;
   backdrop-filter: blur(10px);
