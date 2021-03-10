@@ -1,5 +1,5 @@
 import React from 'react'
-import {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 import Comment from './Comment'
 
 export default function Comments({ThoughtID, comments, setComments}) {

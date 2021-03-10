@@ -1,6 +1,5 @@
 import React from 'react'
 import {useState} from 'react'
-import Comments from './Comments'
 
 export default function AddComment({thought, setComments, comments}) {
   const [commentName, setCommentName] = useState('')
