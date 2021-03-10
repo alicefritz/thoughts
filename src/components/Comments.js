@@ -8,7 +8,6 @@ export default function Comments({ThoughtID, comments, setComments}) {
     fetch(`https://af-thoughts-api.herokuapp.com/comments/${ThoughtID}`)
     .then(res => res.json())
     .then(data => {
-      console.log(data)
       setComments(data)
     })
   }, [])

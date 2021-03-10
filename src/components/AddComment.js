@@ -7,7 +7,6 @@ export default function AddComment({thought, setComments, comments}) {
   const [commentText, setCommentText] = useState('')
 
   const addNewComment = (comment) => {
-    console.log(comment.ThoughtID)
     fetch('https://af-thoughts-api.herokuapp.com/comments',
     {
       method:'POST',
@@ -22,7 +21,6 @@ export default function AddComment({thought, setComments, comments}) {
     })
     .then(response => response.json())
     .then(data => {
-      console.log('Success:', data);
       setComments([...comments, data])
     })
   }

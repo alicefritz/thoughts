@@ -16,11 +16,8 @@ export default function Thought({thought}) {
   }
 
   const toggleComments = () => {
-    console.log('hello')
     setCommentsOpen(!commentsOpen)
   }
-
-  console.log(comments.length)
 
   return (
     <div className="thought">

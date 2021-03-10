@@ -12,7 +12,6 @@ function App() {
   const [addThoughtsOpen, setAddThoughtsOpen] = useState(false)
 
   const fetchThoughts = () => {
-    console.log('fetching')
     fetch('https://af-thoughts-api.herokuapp.com/thoughts')
     .then(res => res.json())
     .then(data => setThoughts(data))
@@ -40,8 +39,6 @@ function App() {
     })
     .then(response => response.json())
     .then(data => {
-      console.log('Success:', data);
-      console.log(thoughts)
       setThoughts([...thoughts, data])
     })
   }
