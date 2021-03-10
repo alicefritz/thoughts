@@ -10,8 +10,8 @@ export default function Thoughts({thoughts}) {
                   {thinker: 'alice', thought: 'yesterday was okay after all', id: 2, time: '2021-03-04 15:51'}]*/
   return (
     <div className="thoughts">
-      {thoughts.map(thought => {
-        return <Thought key={thought.ThoughtID} thought={thought}/>
+      {thoughts.map((thought, index) => {
+        return <Thought key={thought.ThoughtID} thought={thought} index={index}/>
       })}
     </div>
   )

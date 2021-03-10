@@ -5,11 +5,12 @@ import AddComment from './AddComment'
 import Button from './Button'
 import Comments from './Comments'
 
-export default function Thought({thought}) {
+export default function Thought({thought, index}) {
   const [addCommentOpen, setAddCommentOpen] = useState(false)
   const [commentsOpen, setCommentsOpen] = useState(false)
   const [comments, setComments] = useState([])
   const [color, setColor] = useState("");
+  const [maxWidth, setMaxWidth] = useState("");
   
 
   const toggleAddComment = () => {
@@ -26,12 +27,17 @@ export default function Thought({thought}) {
     return colors[Math.floor(Math.random() * colors.length)];
   }
 
+
+
   useEffect(() => {
+    const elements = document.querySelectorAll('.thought')
+    const elementWidth = window.getComputedStyle(elements[index]).getPropertyValue('width');
+    setMaxWidth(elementWidth);
     setColor(getRandomColor());
   }, [])
 
   return (
-    <div className="thought" style={{backgroundColor: color}}>
+    <div className="thought" style={{backgroundColor: color, maxWidth: maxWidth}}>
       <h3>{thought.thinker}</h3>
       <p>{thought.thought}</p>
       <p>{thought.time.length > 10 ? thought.time.slice(0, 10) : thought.time}</p>
