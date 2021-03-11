@@ -37,7 +37,7 @@ export default function Thought({thought, index}) {
   }, [])
 
   return (
-    <div className="thought" style={{backgroundColor: color, maxWidth: maxWidth}}>
+    <div className="thought" style={{backgroundColor: color, width: maxWidth}}>
       <h3>{thought.thinker}</h3>
       <p>{thought.thought}</p>
       <p>{thought.time.length > 10 ? thought.time.slice(0, 10) : thought.time}</p>

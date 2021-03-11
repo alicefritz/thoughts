@@ -13,6 +13,10 @@
   margin-bottom: 0.5rem;
 }
 
+input{
+  width: 100%;
+}
+
 .submit-thought{
   margin: 0.5rem;
 }
