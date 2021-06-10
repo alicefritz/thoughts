@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState} from 'react'
+import './AddThought.css'
 
 export default function AddComment({thought, setComments, comments}) {
   const [commentName, setCommentName] = useState('')
@@ -42,7 +43,7 @@ export default function AddComment({thought, setComments, comments}) {
             onChange={(e) => setCommentText(e.target.value)}
             value={commentText}
             />
-          <input type="submit" value="Make comment"/>
+          <input type="submit" value="Add comment"/>
         </form>
       </div>
   )

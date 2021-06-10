@@ -51,7 +51,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Button toggle={toggleAddThought} text="New Thought" color="green"/>
+      <Button toggle={toggleAddThought} text={addThoughtsOpen ? "Close Thought" : "New Thought"} color="rgb(24, 255, 101)"/>
       {addThoughtsOpen && <AddThought onAdd={addNewThought}/>}
       {thoughts.length > 0 ? <Thoughts thoughts={thoughts}/> : <Loader/>}
     </div>

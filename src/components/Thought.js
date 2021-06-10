@@ -43,7 +43,7 @@ export default function Thought({thought, index}) {
       <p>{thought.time.length > 10 ? thought.time.slice(0, 10) : thought.time}</p>
       <p>{comments.length ? comments.length : thought.comment_count ? thought.comment_count : 0} comments</p>
       <div className="buttons">
-        <Button text={addCommentOpen ? 'Close' : 'Add comment'}  toggle={toggleAddComment}/>
+        <Button text={addCommentOpen ? 'Close' : 'Add comment'}  color={addCommentOpen ? "tomato" : undefined} toggle={toggleAddComment}/>
         {addCommentOpen && <AddComment thought={thought} setComments={setComments} comments={comments}/>}
         {(thought.comment_count > 0 || comments.length > 0) && <Button text={commentsOpen ? 'Hide comments' : 'Show comments'} toggle={toggleComments}/>}
         {commentsOpen && <Comments ThoughtID={thought.ThoughtID} comments={comments} setComments={setComments}/>}
